@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Wutttichai MakeUp</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav_l">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo/logo.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="nav_r">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./makeup.html">MAKEUP</a></li>
+                <li><a href="./app.html">APPOINTMENTS</a></li>
+                <li><a href="./about-us.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="top">
+        <div class="baner">
+            <div id="benner" class="area">
+                <div class="items">
+                    <img src="./img/banner/1.jpg" alt="">
+                </div>
+
+                <div class="items">
+                    <img src="./img/banner/2.jpg" alt="">
+                </div>
+
+                <div class="items">
+                    <img src="./img/banner/1.jpg" alt="">
+                </div>
+                
+            </div>
+        </div>
+
+        <button class="banner-l-button" onclick="moveBanner_l()"><i class="fa-solid fa-angle-left"></i></button>
+        <button class="banner-r-button" onclick="moveBanner_r()"><i class="fa-solid fa-angle-right"></i></button>
+    </header>
+
+
+    <a href="#top"  ><div class="top" id="scroll-link" ><i class="fa-solid fa-angles-up"></i></div></a>
+
+    <div class="content-set">
+        <div class="head-set">
+            <div class="con-head-set-l">
+                <img src="./img/conten/set/ownner.png" alt="">
+            </div>
+            <div class="con-head-set-r">
+                <div class="main-con">
+                    <p class="p-head">Wuttichai MakeUp</p>
+                    <p id="thai" class="p-head-detail" >นาย วุฒิชัย สมนึกตน หรือ เอ็ม อายุ21 ช่างแต่งหน้าเด็กใหม่ไฟแรงจากมหาวิทยาลัยกรุงเทพ เป็นช่างแต่งหน้าทำผม และ รับออกงานอีเว้นท์ทั่วไป  สามารถชื่นชมผลงานต่างๆได้ภายในเว็บไซต์ของ Wuttichai Makeup</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="toppic-block">
+                <div class="toppic-block-l"></div>
+                <div class="toppic-block-c">
+                    <h1> MAKEUP </h1>
+                </div>
+                <div class="toppic-block-l">
+                    
+                </div>
+            </div>
+
+            <div class="block-detail">
+                <div class="block-detail-l">
+                    <h1 id="thai" style="font-weight: 600;">โปรโมชั่น พิเศษ</h1> 
+                    <p id="thai"><br>พิเศษรับส่วนลดฟรี ตั้งแต่15% - 20% เป็นต้นไป เฉพาะลูกค้าเมคอัพพรีเวดดิ้งและกีฬาสีเป็นต้น เงื่อนไขตั้งแต่วันนี้จนถึง มีนาคม 2568 เท่านั้น รีบจองคิวเลย!!</p>
+                    <a href="#PROMOTION"><button>ดูโปรโมชั่น <i class="fa-solid fa-angles-right"></i></button></a>
+                </div>
+
+                <div class="block-detail-R">
+                    <img class="img-block-1" src="./img/block/1.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="toppic-block">
+                <div class="toppic-block-l"></div>
+                <div class="toppic-block-c">
+                    <h1 id="PROMOTION"> PROMOTION </h1>
+                </div>
+                <div class="toppic-block-l"></div>
+
+            </div>
+
+            <div class="promotion">
+                <img class="p-m-1" src="./img/promotion/promo-1.png" alt="">
+                <img src="./img/promotion/promo-2.png" alt="">
+                <img src="./img/promotion/Screenshot 2024-09-04 125347.png" alt="">
+            </div>
+
+            <div class="toppic-block">
+                <div class="toppic-block-l"></div>
+                <div class="toppic-block-c">
+                    <h1 id="thai"> ผลงาน </h1>
+                </div>
+                <div class="toppic-block-l"></div>
+
+            </div>
+
+            <div class="highlight-pro">
+
+                <div class="area-items">
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/1.png" alt="">
+
+                        <p>แต่งหน้าเจ้าสาว</p>
+
+                        <p style="font-size: 19px;">ราคา 3500.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/S__1589276.jpg" alt="">
+
+                        <p>แต่งหน้ากีฬาสี</p>
+
+                        <p style="font-size: 19px;">ราคา 800.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/S__1589278.jpg" alt="">
+
+                        <p>แต่งหน้ารับปริญญา </p>
+
+                        <p style="font-size: 19px;">ราคา 3500.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/3.jpg" alt="">
+
+                        <p>แต่งหน้าดาวเดือน </p>
+
+                        <p style="font-size: 19px;">ราคา 1000.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/4.jpg" alt="">
+
+                        <p>แต่งหน้างานเลี้ยงรุ่น </p>
+
+                        <p style="font-size: 19px;">ราคา 800.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/5.jpg" alt="">
+
+                        <p>แต่งหน้านางนพมาศ </p>
+
+                        <p style="font-size: 19px;">ราคา 1000.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/6.jpg" alt="">
+
+                        <p>แต่งหน้านางแบบ </p>
+
+                        <p style="font-size: 19px;">ราคา 1000.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/7.jpg" alt="">
+
+                        <p>แต่งหน้ากีฬาสีเด็ก </p>
+
+                        <p style="font-size: 19px;">ราคา 800.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/8.jpg" alt="">
+
+                        <p>แต่งหน้าออกงาน </p>
+
+                        <p style="font-size: 19px;">ราคา 1000.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+                    <div id="thai" class="item-pro">
+                        <img src="./img/items/9.jpg" alt="">
+
+                        <p>แต่งหน้านางรำ  </p>
+
+                        <p style="font-size: 19px;">ราคา 800.-</p>
+
+                        <a href="./all makeup.html"><button id="more-b">ดูเพิ่มเติม</button></a>
+                    </div>
+
+
+
+                </div>        
+                
+                <div class="bt-pro">
+                    <i onclick="previouspro()" class="fa-solid fa-caret-left"></i><i onclick="nextpro()" class="fa-solid fa-caret-right"></i>
+                </div>
+                
+            </div>
+        
+
+
+
+        </div>
+
+    </div>
+
+
+    
+    <footer>
+
+        <div class="footer-con">
+            <div class="footer-con-L">
+                <div class="footer-con-detail">
+                    <p><i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/wuttichai.somnuekton">Wuttichai.somnuekton</a></p>
+                    <p><i class="fa-solid fa-phone"></i><a href="tel:0650056550">0650056550</a></p>
+                    <p><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/m_wutti27?igsh=eDloMzQ4azhidnE3">m_wutti27</a></p>
+                    <a href="" class="img-detail"><img src="./img/logo/logo.png" alt=""></a>
+                </div>
+            </div>
+            
+            <div class="footer-con-R">
+                <div class="footer-con-detail">
+
+                    <div class="topic-detail">
+                        <h3>ติดตามเรา</h3>
+                    </div>
+
+                    <div class="icon-contact">
+                        <a href="https://www.facebook.com/wuttichai.somnuekton"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="tel:0650056550"><i class="fa-solid fa-phone"></i></a>
+                        <a href="https://www.instagram.com/m_wutti27?igsh=eDloMzQ4azhidnE3"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                    <div class="topic-detail">
+                        <p style="color: white;">วันทำการ : ทุกวัน <br> เวลาทำการ : 03.00 น. เป็นต้นไป</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+    </footer>
+
+    <div class="pop-img-pro" id="pop-img-pro">
+        <div class="area-pop-img-pro">
+            <img id="img-pro-pop" src="./img/promotion/promo-1.png" alt="">
+
+            <div class="close-x"><i class="fa-solid fa-xmark" id="close-popup-x"></i></div>
+        </div>
+    </div>
+    
+
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+.logo-contact {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    & img {
+        width: 20%;
+        height: 100%;
+        min-width: 200px;
+    }
+    
+}
+
+.contact {
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+    & h1 {
+        color: rgb(255, 169, 188);
+        border-bottom: 2px solid rgb(255, 161, 181);
+    }
+
+    & .main-topic {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.detail-contact {
+    width: 100%;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .item {
+        width: auto;
+        height: auto;
+        padding: 0 20px;
+        display: flex;
+        color: rgb(255, 169, 188);
+
+        & a {
+            width: auto;
+            height: auto;
+            display: flex;
+            position: relative;
+            padding: 5px 10px ;
+            padding-bottom: 5px;
+            transition: 0.5s;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: rgb(236, 130, 153);
+                transition: width 0.4s;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            &:hover {
+                background-color: rgb(255, 169, 188);
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                
+                
+                & i {
+                    color: white;
+                }
+
+                & p {
+                    color: white;
+                }
+            }
+
+            & i {
+                font-size: 45px;
+                margin-right: 10px;
+                color: rgb(255, 169, 188);
+                transition: 0.5s;
+            }
+
+            & p {
+                font-size: 30px;
+                width: auto;
+                height: auto;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align:center;
+                color: rgb(255, 169, 188);
+                transition: 0.5s;
+            }
+
+            & .fa-phone {
+                font-size: 35px;
+                padding-top: 5px;
+            }
+        }
+    }
+}

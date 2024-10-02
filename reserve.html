@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./reserve.css">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Wutttichai MakeUp</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav_l">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo/logo.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="nav_r">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./makeup.html">MAKEUP</a></li>
+                <li><a href="./app.html">APPOINTMENTS</a></li>
+                <li><a href="./about-us.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="reserve-content">
+        <div class="topic-reserve-name">
+            <p id="thai"> กรอกข้อมูล </p>
+        </div>
+
+        <div id="thai" class="input-detail">
+
+            <button class="back-b"onclick="window.history.back()"  >กลับ</button>
+
+            <label for="">เลือก MakeUp</label>
+            <select class="select-makeup" name="makeup" id="cars" style="width:auto;">
+                <option value="แต่งหน้าพรีเวดดิ้ง">แต่งหน้าพรีเวดดิ้ง</option>
+                <option value="แต่งหน้ากีฬาสี/งานโรงเรียน">แต่งหน้ากีฬาสี/งานโรงเรียน</option>
+                <option value="แต่งหน้ารับปริญญา">แต่งหน้ารับปริญญา</option>
+                <option value="แต่งหน้าถ่ายงานนางแบบ/นายแบบ">แต่งหน้าถ่ายงานนางแบบ/นายแบบ</option>
+                <option value="แต่งหน้าออกงานทั่วไป">แต่งหน้าออกงานทั่วไป</option> 
+            </select> <br>
+
+            <label for="">ชื่อจริง</label> 
+            <input class="input-text-detail" type="text" id="name" style="width: 370px;" maxlength="100"> <br>
+
+            <label for="">เบอร์โทร</label> 
+            <input class="input-text-detail" type="text" id="phone" maxlength="10" style="width: 350px;"> <br>
+
+            <label for="">เลือกวัน</label> 
+            <input class="input-date-detail" type="date" id="date"> <br>
+
+            <label for="">เลือกเวลา</label> 
+            <input class="input-date-detail" type="time" id="time"> <br>
+
+            <div id="loading-spinner" class="spinner"></div>
+
+            <button id="more-b" class="handlesubmit" onclick="handleSubmit()">SUBMIT</button>
+
+
+                
+        </div>
+        
+        
+
+        
+    </div>
+    
+
+    
+    <footer>
+
+        <div class="footer-con">
+            <div class="footer-con-L">
+                <div class="footer-con-detail">
+                    <p><i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/wuttichai.somnuekton">Wuttichai.somnuekton</a></p>
+                    <p><i class="fa-solid fa-phone"></i><a href="tel:0650056550">0650056550</a></p>
+                    <p><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/m_wutti27?igsh=eDloMzQ4azhidnE3">m_wutti27</a></p>
+                    <a href="" class="img-detail"><img src="./img/logo/logo.png" alt=""></a>
+                </div>
+            </div>
+            
+            <div class="footer-con-R">
+                <div class="footer-con-detail">
+
+                    <div class="topic-detail">
+                        <h3>ติดตามเรา</h3>
+                    </div>
+
+                    <div class="icon-contact">
+                        <a href="https://www.facebook.com/wuttichai.somnuekton"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="tel:0650056550"><i class="fa-solid fa-phone"></i></a>
+                        <a href="https://www.instagram.com/m_wutti27?igsh=eDloMzQ4azhidnE3"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                    <div class="topic-detail">
+                        <p style="color: white;">วันทำการ : ทุกวัน <br> เวลาทำการ : 03.00 น. เป็นต้นไป</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+    </footer>
+
+    <div id="pop-up" class="pop-a">
+        <div class="main-pop">
+            <h1>คำเตื่อน</h1>
+
+            <p id="pop-up-message" >asdafdsgsdfadasdasdasdasdasdsadadasdasdasdasdsad</p>
+
+            <button id="more-b-b" >OK</button>
+        </div>
+
+    </div>
+    
+
+    
+    <script>
+
+        
+
+    document.getElementById('phone').addEventListener('input', function(e) {
+        // ลบช่องว่างทั้งหมดในค่าที่พิมพ์
+        this.value = this.value.replace(/\s+/g, '');
+    });
+
+    // ฟังก์ชันสำหรับป้องกันไม่ให้ใส่ค่าที่ไม่ใช่ตัวเลข
+    document.getElementById('phone').addEventListener('keydown', function(e) {
+        // ตรวจสอบว่าปุ่มที่กดไม่ใช่ตัวเลขและไม่ใช่ปุ่มพิเศษ (เช่น backspace)
+        if (
+        (e.keyCode < 48 || e.keyCode > 57) && // ตัวเลขบนแป้นหลัก (0-9)
+        (e.keyCode < 96 || e.keyCode > 105) && // ตัวเลขบนแป้นตัวเลข (Numpad 0-9)
+        e.keyCode !== 8 && // ปุ่ม Backspace
+        e.keyCode !== 9 && // ปุ่ม Tab
+        e.keyCode !== 37 && // ปุ่มลูกศรซ้าย
+        e.keyCode !== 39 && // ปุ่มลูกศรขวา
+        e.keyCode !== 46 // ปุ่ม Delete
+        ) {
+        e.preventDefault(); // ป้องกันการพิมพ์ตัวอักษรอื่นๆ ที่ไม่ใช่ตัวเลข
+        }
+    });
+
+
+  // ฟังก์ชันแสดง pop-up
+  function showPopUp(message) {
+    document.getElementById('pop-up-message').innerText = message; // กำหนดข้อความที่จะแสดง
+    document.getElementById('pop-up').style.display = 'flex'; // แสดง pop-up
+  }
+
+  // ฟังก์ชันซ่อน pop-up
+  document.getElementById("more-b-b").addEventListener("click", function() {
+    document.getElementById('pop-up').style.display = 'none'; // ซ่อน pop-up
+  });
+
+  document.getElementById("more-b").addEventListener("click", function(e){
+  e.preventDefault();
+
+  var submitButton = document.getElementById("more-b");
+  var spinner = document.getElementById("loading-spinner");
+
+  // แสดงเครื่องหมายโหลด
+  spinner.style.display = 'flex';
+  submitButton.disabled = true;
+  
+
+  var name = document.getElementById('name').value;
+  var phone = document.getElementById('phone').value;
+  var date = document.getElementById('date').value;
+  var time = document.getElementById('time').value;
+  var makeup = document.getElementById('cars').value;
+
+  if (!name || !phone || !date || !time || !makeup) {
+    showPopUp("กรุณากรอกข้อมูลให้ครบค่ะ");
+    spinner.style.display = 'none'; // ซ่อนเครื่องหมายโหลด
+    submitButton.disabled = false;
+    return;
+  }
+
+  if (phone.length !== 10) {
+    showPopUp("กรุณากรอกเบอร์โทรให้ครบค่ะ");
+    spinner.style.display = 'none';
+    submitButton.disabled = false;
+    return;
+  }
+
+  var inputDate = new Date(date);
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  if (inputDate < today) {
+    showPopUp("วันที่ท่านกรอกได้ผ่านมาแล้ว กรุณากรอกใหม่ค่ะ");
+    spinner.style.display = 'none';
+    submitButton.disabled = false;
+    return;
+  }
+
+  var inputTime = new Date(date + 'T' + time); // แปลงวันที่และเวลาเป็น Date object
+    if (inputTime < new Date()) { // เปรียบเทียบกับเวลาปัจจุบัน
+        showPopUp("เวลาที่ท่านกรอกได้ผ่านมาแล้ว กรุณากรอกใหม่ค่ะ");
+        spinner.style.display = 'none';
+        submitButton.disabled = false;
+        return;
+    }
+ 
+  var day = inputDate.getDate();
+  var month = inputDate.getMonth() + 1;
+  var year = inputDate.getFullYear();
+
+  day = day < 10 ? '0' + day : day;
+  month = month < 10 ? '0' + month : month;
+
+  var formattedDate = `${day}/${month}/${year}`;
+
+  var formattedPhone = "=\"" + phone + "\""; // เพิ่มเครื่องหมายคำพูดรอบเบอร์โทร
+
+
+  // ส่งข้อมูลไปยัง Google Sheets
+  fetch('https://script.google.com/macros/s/AKfycbz27_HAeX_QBk7TC5qovSR6hMnjO8lIaCATHf1sdeHdV3lypKe2d1BjkqF1wqHIY0hC/exec', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    // ใส่ phone เป็น string เพื่อป้องกันการลบ 0 นำหน้า
+    body: `name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&date=${encodeURIComponent(formattedDate)}&time=${encodeURIComponent(time)}&makeup=${encodeURIComponent(makeup)}`,
+  })
+  .then(response => {
+    showPopUp("ได้บันทึกข้อมูลของคุณเรียบร้อยแล้ว");
+    // เคลียร์ค่าที่กรอกในฟอร์ม
+    document.getElementById('name').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('date').value = '';
+    document.getElementById('time').value = '';
+    document.getElementById('cars').selectedIndex = 0;
+
+    spinner.style.display = 'none'; // ซ่อนเครื่องหมายโหลด
+    submitButton.disabled = false; // เปิดใช้งานปุ่มอีกครั้ง
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    spinner.style.display = 'none'; // ซ่อนเครื่องหมายโหลด
+    submitButton.disabled = false;
+  });
+});
+
+
+
+
+  
+      </script>
+      
+      
+      
+      
+      
+      
+      
+      
+</body>
+</html>

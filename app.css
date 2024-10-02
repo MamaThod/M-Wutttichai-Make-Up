@@ -1,0 +1,47 @@
+.calendar {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(255, 169, 188);
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.j-q {
+    width: 100%;
+    display: flex;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+
+    & button {
+        padding: 10px 50px;
+        border-radius: 20px;
+        border: 2px solid rgb(255, 169, 188);
+        background-color: rgb(255, 169, 188);
+        color: white;
+
+        &:hover {
+            background-color: white;
+            color: rgb(255, 169, 188);
+            transform: translateY(-10px);
+        }
+
+        & p {
+            font-size: 25px;
+        }
+    }
+}
+
+.calendar-text {
+    font-weight: 300;
+}
