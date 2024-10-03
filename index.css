@@ -448,7 +448,7 @@ nav {
 
                 & .item-pro {
                     width: 200px;
-                    height: 350px;
+                    height: auto;
                     background-color: rgb(255, 249, 251);
                     border-radius: 20px;
                     border: 2px solid rgb(255, 169, 188);
